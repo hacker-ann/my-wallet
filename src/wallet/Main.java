@@ -1,0 +1,140 @@
+package wallet;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        PLNWallet p = new PLNWallet("PLN wallet");
+        p.depositMoney(2, "PLN");
+        p.displayAccountBalance();
+        p.depositMoney(3, "EUR");
+        p.displayAccountBalance();
+        p.depositMoney(10, "CHF");
+        p.displayAccountBalance();
+        p.depositMoney(5, "SKK");
+        p.displayAccountBalance();
+        p.depositMoney(5, "USD");
+        p.displayAccountBalance();
+        p.cashOutMoney(4, "EUR");
+        p.displayAccountBalance();
+        p.cashOutMoney(1, "PLN");
+        p.displayAccountBalance();
+        p.cashOutMoney(2, "CHF");
+        p.displayAccountBalance();
+        p.cashOutMoney(6, "USD");
+        p.displayAccountBalance();
+        p.depositMoney(12, "EUR");
+        p.cashOutMoney(14, "PLN");
+        p.depositMoney(20, "CHF");
+        p.displayAccountBalance();
+        System.out.println();
+
+        System.out.println("Operations cash in for PLN currency:");
+        p.displayOperations("cash in", "PLN");
+        System.out.println("Operations cash out for PLN currency:");
+        p.displayOperations("cash out", "PLN");
+        System.out.println("All operations for PLN currency:");
+        p.displayOperations("all", "PLN");
+        System.out.println("Operations cash in for EUR currency:");
+        p.displayOperations("cash in", "EUR");
+        System.out.println("Operations cash out for EUR currency:");
+        p.displayOperations("cash out", "EUR");
+        System.out.println("All operations for EUR currency:");
+        p.displayOperations("all", "EUR");
+        System.out.println("Operations cash in for USD currency:");
+        p.displayOperations("cash in", "USD");
+        System.out.println("Operations cash out for USD currency:");
+        p.displayOperations("cash out", "USD");
+        System.out.println("All operations for USD currency:");
+        p.displayOperations("all", "USD");
+        System.out.println("Operations cash in for CHF currency:");
+        p.displayOperations("cash in", "CHF");
+        System.out.println("Operations cash out for CHF currency:");
+        p.displayOperations("cash out", "CHF");
+        System.out.println("All operations for CHF currency:");
+        p.displayOperations("all", "CHF");
+        System.out.println("All operations: ");
+        p.displayOperations("all", "all");
+        System.out.println("Operations deposit in for PLN currency:");
+        p.displayOperations("deposit", "PLN");
+        System.out.println("Operations cash out for SKD currency:");
+        p.displayOperations("cash out", "SKD");
+        System.out.println("Operations cash in for all currencies:");
+        p.displayOperations("cash in", "all");
+        System.out.println("Operations cash out for all currencies:");
+        p.displayOperations("cash out", "all");
+        System.out.println("Currency conversion:");
+        p.exchangeRates(2, "PLN", "EUR");
+        p.exchangeRates(4, "EUR", "USD");
+        p.exchangeRates(12, "CHF", "PLN");
+        p.exchangeRates(12, "GBP", "PLN");
+
+
+        EuroWallet e = new EuroWallet("EUR wallet");
+        e.depositMoney(2, "PLN");
+        e.displayAccountBalance();
+        e.depositMoney(3, "EUR");
+        e.displayAccountBalance();
+        e.depositMoney(10, "CHF");
+        e.displayAccountBalance();
+        e.depositMoney(5, "SKK");
+        e.displayAccountBalance();
+        e.depositMoney(10, "USD");
+        e.displayAccountBalance();
+        e.cashOutMoney(4, "EUR");
+        e.displayAccountBalance();
+        e.cashOutMoney(1, "PLN");
+        e.displayAccountBalance();
+        e.cashOutMoney(2, "CHF");
+        e.displayAccountBalance();
+        System.out.println("Currency conversion:");
+        e.exchangeRates(5, "PLN", "EUR");
+        e.exchangeRates(5, "PLN", "CHF");
+        e.exchangeRates(5, "PLN", "USD");
+        e.exchangeRates(5, "EUR", "USD");
+        e.exchangeRates(5, "EUR", "CHF");
+        e.exchangeRates(5, "USD", "EUR");
+        e.exchangeRates(5, "USD", "PLN");
+        e.exchangeRates(5, "USD", "CHF");
+        e.exchangeRates(5, "CHF", "EUR");
+        e.exchangeRates(5, "CHF", "PLN");
+        e.exchangeRates(5, "CHF", "USD");
+
+        USDWallet u = new USDWallet("USD wallet");
+        u.depositMoney(2, "PLN");
+        u.displayAccountBalance();
+        u.cashOutMoney(4, "EUR");
+        u.displayAccountBalance();
+        u.depositMoney(3, "EUR");
+        u.displayAccountBalance();
+        u.depositMoney(10, "CHF");
+        u.displayAccountBalance();
+        u.depositMoney(5, "SKK");
+        u.displayAccountBalance();
+        u.cashOutMoney(2, "CHF");
+        u.displayAccountBalance();
+        u.depositMoney(5, "USD");
+        u.displayAccountBalance();
+        u.cashOutMoney(1, "PLN");
+        u.displayAccountBalance();
+        u.cashOutMoney(6, "USD");
+        u.displayAccountBalance();
+        System.out.println("Currency conversion:");
+        u.exchangeRates(1, "PLN", "EUR");
+        u.exchangeRates(1, "PLN", "CHF");
+        u.exchangeRates(1, "PLN", "USD");
+        u.exchangeRates(1, "EUR", "USD");
+        u.exchangeRates(1, "EUR", "CHF");
+        u.exchangeRates(1, "USD", "EUR");
+        u.exchangeRates(1, "USD", "PLN");
+        u.exchangeRates(1, "USD", "CHF");
+        u.exchangeRates(1, "CHF", "EUR");
+        u.exchangeRates(1, "CHF", "PLN");
+        u.exchangeRates(1, "CHF", "USD");
+        System.out.println("All operations:");
+        u.displayAllOperations(u.allUsdOperations);
+    }
+}
+
+
