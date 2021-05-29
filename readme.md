@@ -26,10 +26,11 @@ This project includes:
  
 If you want to run the project in an IDE, such as IntelliJ go to the File menu and choose:
 ```
-File -> Open
-In the dialog that opens, select the directory that contains the desired source code
-Click OK
-To run the program, click the class with the main method (Main) and select the Run> Run option or press the Alt + Shift + F10 combination and select the Run option from the list.
+1. File -> Open
+2. In the dialog that opens, select the directory that contains the desired source code.
+3. Click OK.
+4. To run the program, click the class with the main method (Main) and select the Run> Run option 
+   or press the Alt + Shift + F10 combination and select the Run option from the list.
 ```
 
 ## Project Status
